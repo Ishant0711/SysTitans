@@ -13,7 +13,7 @@ public class LinkedList {
         n2.next = n3;
         printLinkedList(head);
 
-        head = insertInLinkedList(3,7,head);
+        head = insertInLinkedList(1,7,head);
         printLinkedList(head);
     }
 
@@ -35,13 +35,14 @@ public class LinkedList {
             return newNode;
         }
         Node<Integer> temp = head;
-        for(int i =0 ; i<pos-1; i++){
+         for(int i =0 ; i<pos-1; i++){
             temp = temp.next;
         }
 
         newNode.next = temp.next;
-        temp.next = newNode;
-
+        temp.next = newNode;      //if you execute line 43 before line 42
+                                  //1. Lost reference : you immediately overwrite the pointer to the rest of the list
+                                 // 2. orphaned data : the entire remaining part of linked list is disconnected and lost in memory forever
 
         return head;
 
