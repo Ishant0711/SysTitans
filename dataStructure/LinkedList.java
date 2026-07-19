@@ -14,6 +14,7 @@ public class LinkedList {
         printLinkedList(head);
 
         head = insertInLinkedList(1,7,head);
+        head = deleteInLinkedList(3,head);
         printLinkedList(head);
     }
 
@@ -46,6 +47,19 @@ public class LinkedList {
 
         return head;
 
+    }
+
+    public static Node<Integer> deleteInLinkedList(int pos, Node<Integer> head){
+        if(pos ==0){
+            return head.next;
+        }
+
+        Node<Integer> temp = head;
+        for(int i =0; i<pos-1 ; i++){
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        return head;
     }
 
 }
