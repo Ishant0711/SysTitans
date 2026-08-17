@@ -1,4 +1,4 @@
-package dataStructure;
+package dataStructure.StringQuestions;
 
 import java.util.*;
 

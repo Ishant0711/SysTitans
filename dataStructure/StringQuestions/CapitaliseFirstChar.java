@@ -1,4 +1,4 @@
-package dataStructure;
+package dataStructure.StringQuestions;
 
 public class CapitaliseFirstChar {
     public static String capitaliseFirstChar(String st){
@@ -7,8 +7,8 @@ public class CapitaliseFirstChar {
         for(String sp :str){
             char[] ch  = sp.toCharArray();
             ch[0] = Character.toUpperCase(ch[0]);
-            String result = new String(ch);
-            ss.append(result).append(" ");
+           // String result = new String(ch);
+            ss.append(ch).append(" ");
         }
         return ss.toString();
     }

@@ -1,4 +1,4 @@
-package dataStructure;
+package dataStructure.StringQuestions;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,7 +12,7 @@ public class LengthOfLongestSubs {
         int left = 0;
         for(int right =0; right<n; right++){
             char key = str.charAt(right);
-            while(set.contains(key)){
+            while(set.contains(key)){               //set.add(key)  -> return true, if already present then return false
                 set.remove(str.charAt(left));
                 left++;
             }

@@ -1,4 +1,4 @@
-package dataStructure;
+package dataStructure.StringQuestions;
 
 public class CompressedString {
     public static String compressedString(String str){
@@ -22,8 +22,8 @@ public class CompressedString {
 
     public static void main(String[] args){
         //Input:
-      // String word = "aaaaaaaaaaaaaabb";
-         String word = "abcde";
+        String word = "aaaaaaaaaaaaaabb";
+        // String word = "abcde";
        //Output: "9a5a2b"
         System.out.println(compressedString(word));
     }
