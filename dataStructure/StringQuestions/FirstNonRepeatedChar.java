@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FirstNonRepeatedChar {
-    public static char firstNonRepeatedChar(String str){
+    public static Character firstNonRepeatedChar(String str){
         Map<Character, Integer> map = new LinkedHashMap<>();
 
         for(char c : str.toCharArray()){
@@ -14,7 +14,7 @@ public class FirstNonRepeatedChar {
             if(entry.getValue()==1){
                 return entry.getKey();
             }
-        } return ' ';
+        } return null;
     }
     public static void main(String[] args){
         String str = "SWISS";
