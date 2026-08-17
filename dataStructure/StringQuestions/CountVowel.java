@@ -5,10 +5,12 @@ public class CountVowel {
         int countV =0;
         int countC = 0;
         for(char c : str.toCharArray()){
-            if(isVowel(c)){
-                countV++;
-            } else{
-                countC++;
+            if(Character.isLetter(c)) {   // only alphabets
+                if (isVowel(c)) {
+                    countV++;
+                } else {
+                    countC++;
+                }
             }
         }
         System.out.println("Consonant count: " + countC);
@@ -18,7 +20,7 @@ public class CountVowel {
         return 'a' == c || 'e' == c || 'i' == c || 'o' == c || 'u' == c;
     }
     public static void main(String[] args){
-        String str = "pankhudi";
+        String str = "pankhudi123";
         System.out.println("Vowel count "+countVowel(str));
     }
 }
