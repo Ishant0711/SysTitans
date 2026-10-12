@@ -3,12 +3,28 @@ package dataStructure.LinkedListProblem;
 class DeleteNodeInLinkedList {
     // Function to delete the given node
     public void deleteNode(ListNode node) {
-        if (node == null || node.next == null) {
-            return; // cannot delete if it's the last node
+        if (node == null) return;
+
+        ListNode prev = null;
+        // Shift values forward until the last node
+        while (node != null && node.next != null) {
+            node.val = node.next.val;   // copy next node's value
+            prev = node;                // track previous node
+            node = node.next;           // move forward
         }
-        node.val = node.next.val;       // copy next node's value
-        node.next = node.next.next;     // bypass next node
+        // Remove the last node by unlinking
+        if (prev != null) {
+            prev.next = null;
+        }
     }
+    // Function to delete the given node
+//    public void deleteNode(ListNode node) {
+//        if (node == null || node.next == null) {
+//            return; // cannot delete if it's the last node
+//        }
+//        node.val = node.next.val;       // copy next node's value
+//        node.next = node.next.next;     // bypass next node
+//    }
 
     // Utility function to print the list
     public void printList(ListNode head) {
