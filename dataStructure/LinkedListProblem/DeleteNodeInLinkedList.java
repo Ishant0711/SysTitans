@@ -17,15 +17,6 @@ class DeleteNodeInLinkedList {
             prev.next = null;
         }
     }
-    // Function to delete the given node
-//    public void deleteNode(ListNode node) {
-//        if (node == null || node.next == null) {
-//            return; // cannot delete if it's the last node
-//        }
-//        node.val = node.next.val;       // copy next node's value
-//        node.next = node.next.next;     // bypass next node
-//    }
-
     // Utility function to print the list
     public void printList(ListNode head) {
         ListNode temp = head;
@@ -54,15 +45,5 @@ class DeleteNodeInLinkedList {
 
         System.out.println("After Deleting Node 5:");
         obj.printList(head);
-    }
-}
-
-// Definition for singly-linked list.
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
     }
 }
